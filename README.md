@@ -1,5 +1,6 @@
 # mfastealer
-This project includes sample code to help those wanting to use UiPath (RPA) to get around MFA/2FA VPN configurations. 
+This project includes sample code to help those wanting to use UiPath (RPA) to get around MFA/2FA VPN configurations. For more
+background information, see https://adapt-and-attack.com/2018/06/04/defeating-2fa-with-robots/
 
 ## What You Need
 - UiPath Community Edition: https://www.uipath.com/community-edition-download    
@@ -22,7 +23,7 @@ This is probably pretty new to most people, so if you have questions feel free t
 
 ### UiPath
 Install the [UiPath Community Edition](https://www.uipath.com/community-edition-download). You can then import the `VPN Login.xaml` file to get started, this saved project
-is for Anyconnect. I can't promise this will work for all Anyconnect clients and configurations, and definitely will not work
+is for AnyConnect. I can't promise this will work for all AnyConnect clients and configurations, and definitely will not work
 for other VPN clients. 
 
 I'm absolutely no expert on UiPath and basically just fiddled with it until it worked for my needs. I would say it is pretty
