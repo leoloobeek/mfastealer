@@ -3,7 +3,7 @@ This project includes sample code to help those wanting to use UiPath (RPA) to g
 
 ## What You Need
 - UiPath Community Edition: https://www.uipath.com/community-edition-download    
-- The mfastealer.exe binary from the Releases page, or if you don't trust me, Golang to compile the mfastealer.go file.    
+- The mfastealer.exe binary from the [Releases](https://github.com/leoloobeek/mfastealer/releases/) page, or if you don't trust me, Golang to compile the mfastealer.go file.    
 - A webserver along with PHP
 - A Windows SSH client for creating an SSH tunnel
 
@@ -42,10 +42,12 @@ The provided demo UiPath project DOES NOT handle errors. A useful addition would
 target fatfingering their password, then clearing out the loginFile.txt file awaiting for another target to fall for the attack.
 
 ### mfastealer.exe
-Next, download either the mfastealer.exe binary from the Releases page or compile it to run on Windows. Running the binary should
-start a webserver listening on TCP port 3000. This webserver is expecting to receive an HTTP POST request with `username`, `password`,
+Next, download either the mfastealer.exe binary from the [Releases](https://github.com/leoloobeek/mfastealer/releases/) page or compile it to run on Windows. Running the binary should
+start a webserver listening on the provied port. This webserver is expecting to receive an HTTP POST request with `username`, `password`,
 and `secondPassword`. On the first set of credentials received, mfastealer.exe will write the credentials to loginFile.txt and
 to cred.log. All subsequent credentials received will just be written to cred.log for safe keeping.
+
+Example: `mfastealer.exe 3000`
 
 ### Phishing Page Setup
 The attacker will setup a phishing page with a form requesting the username, password, and second password (token, "push", etc.).
